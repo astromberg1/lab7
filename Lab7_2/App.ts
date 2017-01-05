@@ -6,7 +6,7 @@
 
     constructor(theName: string, theCategory:string, thePrice:number, theArticleNumber:string) {
         this.Name = theName;
-        this.Category = theName;
+        this.Category = theCategory;
         this.Price = thePrice;
         this.ArticelNumber = theArticleNumber;
     }
@@ -118,7 +118,7 @@ function showbooks() {
 
 function loadbook() {
 
-    let name: string = $(document.getElementById("name")).val();
+    let name: string = $("#name").val();
     let Category: string = "Book";
     let Price: number = $(document.getElementById("price")).val();
     let ArticleNumber: string = $(document.getElementById("article")).val();
@@ -126,7 +126,7 @@ function loadbook() {
     let Writer: string = $(document.getElementById("writer")).val();
     let Year: number = $(document.getElementById("year")).val();
 
-    ProduktArray.push(new Book(name, "Book", Price, ArticleNumber, Writer, Year));
+    ProduktArray.push(new Book(name, Category, Price, ArticleNumber, Writer, Year));
 
 
 }

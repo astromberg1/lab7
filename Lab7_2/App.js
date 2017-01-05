@@ -6,7 +6,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Product = (function () {
     function Product(theName, theCategory, thePrice, theArticleNumber) {
         this.Name = theName;
-        this.Category = theName;
+        this.Category = theCategory;
         this.Price = thePrice;
         this.ArticelNumber = theArticleNumber;
     }
@@ -83,12 +83,11 @@ function showbooks() {
     resdivbook.innerHTML = utstring + "</p>";
 }
 function loadbook() {
-    var name = $(document.getElementById("name")).val();
+    var name = $("#name").val();
     var Category = "Book";
     var Price = $(document.getElementById("price")).val();
     var ArticleNumber = $(document.getElementById("article")).val();
     var Writer = $(document.getElementById("writer")).val();
     var Year = $(document.getElementById("year")).val();
-    ProduktArray.push(new Book(name, "Book", Price, ArticleNumber, Writer, Year));
+    ProduktArray.push(new Book(name, Category, Price, ArticleNumber, Writer, Year));
 }
-//# sourceMappingURL=App.js.map
