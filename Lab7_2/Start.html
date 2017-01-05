@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="App.js"></script>
+</head>
+<body>
+
+    <button onclick="showproducts()">lista alla produkter</button>
+    <div id="productlist">
+
+    </div>
+
+    <br />
+
+    <button onclick="showbooks()">lista alla Böcker</button>
+    <div id="booklist"> </div>
+    <button onclick="showform()">Lägg till ny Bok</button>
+    <div id="bokform" hidden>
+
+
+        <h3>Add book</h3>
+
+       <!-- <form action="javascript:;" onsubmit="myFunction(this)-->
+
+        <form action="javascript:;" onsubmit="loadbook()" name="input_form" id="validate_form" method="get" accept-charset="utf-8">
+
+
+    <ul style="list-style:none">
+        <li><label for="name">Name: (*)</label><input id="name" type="text" name="rt_name" value="" required autofocus /> </li>
+        <li><label for="price">Price: (*)</label><input id="price" type="text" name="rt_price" value="" required /> </li>
+        <li><label for="article">ArticleNumber: (*)</label><input id="article" type="text" name="rt_article" value="" required /> </li>
+        <li><label for="writer">Writer: (*) </label><input id="writer" type="text" name="rt_writer" value="" required /> </li>
+        <li><label for="Year">Year: (*)</label><input id="year" type="number" name="rt_year" value="" required /> </li>
+
+
+
+        <li><input type="submit" class="button" value="Add Book" /></li>
+    </ul>
+    </form>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>
